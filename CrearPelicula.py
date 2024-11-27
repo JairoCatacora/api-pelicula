@@ -27,7 +27,8 @@ def lambda_handler(event, context):
             'tipo': "INFO",
             'log_datos': {
                 'message': "Pelicula creada exitosamente",
-                'pelicula': pelicula
+                'pelicula': pelicula,
+                'response': response
             }
         })
         )
