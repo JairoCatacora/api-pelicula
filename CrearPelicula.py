@@ -40,7 +40,14 @@ def lambda_handler(event, context):
             'response': response
         }
     except Exception as e:
-        print(e)
+        print(json.dumps({
+            'tipo': "ERROR",
+            'log_datos': {
+                'message': "Error encontrado al crear la pelicula",
+                'error': str(e)
+            }
+        }))
+
         return {
             'statusCode': 500,
             'tipo': "ERROR",
